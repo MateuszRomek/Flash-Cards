@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px 0 20px 0;
+}
+.titleContainer__title {
+  margin: 0 20px 0 20px;
+}
+.button {
+  padding: 4px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.buttonText {
+  margin-left: 8px;
+}
+
+.card {
+  width: 450px;
+  height: 300px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  position: relative;
+  margin: 5px 0 15px 0;
+  
+}
+.card__flip {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 0;
+  background-color: transparent;
+  padding: 5px 8px 5px 8px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.card__front,
+.card__back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  backface-visibility: hidden;
+  transition: transform .5s;
+}
+.card__back {
+  background-color: rgba(202, 204, 206, .3);
+}
+.card__front {
+  transform: perspective(900px) rotateY(0deg);
+}
+.card .card__back {
+  transform: perspective(900px) rotateY(180deg);
+}
+.card--flipped .card__back {
+  transform: perspective(900px) rotateY(0deg);
+}
+.card--flipped .card__front {
+  transform: perspective(900px) rotateY(-180deg);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+}
+.controls__cardsNumber {
+  font-size: 12px;
+  font-weight: 400;
+}
+.controls__btn {
+ border: 0;
+ background-color: transparent;
+ padding: 4px 5px;
+}
+.prevBtn {
+  margin-right: 15px;
+}
+.nextBtn {
+  margin-left: 15px;
+}
+.modal__outer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D3D3D3;
+  transition: opacity .3s;
+  z-index: 100;
+}
+.modal__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+.modal__form {
+  width: 100%;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form__label {
+  margin: 5px 0 5px 0;
+}
+.form__input {
+  display: block;
+  margin: 0 0 15px 0;
+  padding: 6px;
+}
+.modal__titleContainer {
+ display: flex; 
+ align-items: center;
+}
+.modal__title {
+  margin-right: 15px;
+}
+.closeModal {
+  border: 0;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 8px;
+}
+.fa-times {
+  font-size: 18px;
+}
+.submitButton {
+  width: 140px;
+  padding: 5px;
+  align-self: center;
+}
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
