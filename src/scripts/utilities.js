@@ -1,5 +1,5 @@
 import elements from "./elements.js";
-import cardsArray from "./questionsArray.js";
+import cardsArray from "./cardsArray.js";
 
 const { modalOuter,
         allCardsNumber, currentCardNumber,
