@@ -17,8 +17,9 @@ const {
 /* This function render flash card on page load
  based on localstorage current item index */
 function openCurrentIndex() {
-    const CurrentIndex = JSON.parse(localStorage.getItem('currentIndex'));
-    populateCard(null, CurrentIndex);
+    const currentIndex = JSON.parse(localStorage.getItem('currentIndex'));
+    if(currentIndex === null) return;
+    populateCard(null, currentIndex);
     updateCurrentCardNumber(findCurrentCardIndex() + 1);
 }
 
