@@ -9,6 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .titleContainer {
@@ -63,6 +64,7 @@ body {
   align-items: center;
   font-size: 1.3rem;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   transition: transform .5s;
 }
 .card__back {
@@ -162,4 +164,40 @@ body {
 .hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+.back__title {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .card {
+    width: 340px;
+    height: 250px;
+  }
+  .titleContainer__title {
+    font-size: 22px;
+  }
+  .addButton {
+    font-size: 12px;
+  }
+  .controls__cardsNumber {
+    font-size: 20px;
+  }
+  .controls__btn {
+    font-size: 20px;
+  }
 }
