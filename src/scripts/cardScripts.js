@@ -19,9 +19,7 @@ export function populateCard(e, index = 0) {
 
     }
 }
-/* Get current index and increment it by one
-   This function also uses other functions: populateCard, saveCurrentIndex,UpdateCurrentCardNumber
- */
+// Get current index and increment it by one
 export function openNextCard() {
     if(cardContainer.classList.contains('hidden')) return;
     const nextCardIndex = findCurrentCardIndex() + 1;
@@ -31,9 +29,7 @@ export function openNextCard() {
     updateCurrentCardNumber(findCurrentCardIndex() + 1);
     saveCurrentIndex()
 }
-/* Get current index and subtract from it 1
-    This function also uses other functions: populateCard, saveCurrentIndex,UpdateCurrentCardNumber
- */
+// Get current index and subtract from it 1
 export function openPrevCard() {
     if(cardContainer.classList.contains('hidden')) return;
     const nextCardIndex = findCurrentCardIndex() - 1;
