@@ -22,6 +22,7 @@ export function populateCard(e, index = 0) {
 // Get current index and increment it by one
 export function openNextCard() {
     if(cardContainer.classList.contains('hidden')) return;
+    card.classList.remove('card--flipped');
     const nextCardIndex = findCurrentCardIndex() + 1;
     if(nextCardIndex > cardsArray.length - 1) return;
 
@@ -32,6 +33,7 @@ export function openNextCard() {
 // Get current index and subtract from it 1
 export function openPrevCard() {
     if(cardContainer.classList.contains('hidden')) return;
+    card.classList.remove('card--flipped');   
     const nextCardIndex = findCurrentCardIndex() - 1;
     if(nextCardIndex < 0) return;
 
