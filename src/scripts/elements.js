@@ -15,6 +15,7 @@ const elements = {
     addNewCardButton: document.querySelector('.addButton'),
     closeModalButton: document.querySelector('.closeModal'),
     cardContainer: document.querySelector('.cardsContainer'),
+    clearLocalStorageButton: document.querySelector('.clearLocalStorage'),
 
 };
 

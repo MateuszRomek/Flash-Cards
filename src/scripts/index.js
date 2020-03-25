@@ -3,6 +3,7 @@ import cardsArray from "./cardsArray.js";
 import {
     toggleModal, openCardsView, updatedAllCardsNumber,
     findCurrentCardIndex,updateCurrentCardNumber,
+    clearLocalStorage,
        } from "./utilities.js";
 
 import { flipCard, openNextCard, openPrevCard, populateCard } from "./cardScripts.js";
@@ -12,6 +13,7 @@ const {
     flipButton, prevButton, nextButton,
     form, questionInput, answerInput,
     addNewCardButton, closeModalButton, modalOuter,
+    clearLocalStorageButton,
 } = elements;
 
 /* This function render flash card on page load
@@ -64,7 +66,7 @@ window.addEventListener('load', updatedAllCardsNumber);
 window.addEventListener('load', openCurrentIndex);
 
 
-
+clearLocalStorageButton.addEventListener('click', clearLocalStorage )
 closeModalButton.addEventListener('click', toggleModal);
 addNewCardButton.addEventListener('click', toggleModal);
 flipButton.addEventListener('click', flipCard);
