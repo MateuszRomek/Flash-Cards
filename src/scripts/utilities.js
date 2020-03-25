@@ -42,3 +42,10 @@ export function findCurrentCardIndex() {
 export function saveCurrentIndex() {
     localStorage.setItem('currentIndex', JSON.stringify(findCurrentCardIndex()));
 }
+
+//Remove saved cards and current index from local storage.
+export function clearLocalStorage() {
+  localStorage.removeItem('cardsArray');
+  localStorage.removeItem('currentIndex');
+  window.location.reload();
+}
